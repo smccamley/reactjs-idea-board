@@ -3,6 +3,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+
+
+## Quickstart
+
+To get up and running 
+cd into the directory and run 
+
+* `npm install` to install all the dependencies, followed by 
+* `npm start` to get the server online
+
+
+
+
+
+
+
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
