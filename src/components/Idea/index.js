@@ -39,17 +39,13 @@ class Idea extends Component {
     updateTitle(e){
         console.log(this.props.idea, e.target.value)
         this.props.dispatch(
-            updateIdea(
-                Object.assign(this.props.idea, {title:e.target.value})
-            )
+            updateIdea(this.props.idea, {title:e.target.value})
         )
     }
     updateBody(e){
         console.log(this.props.idea, e.target.value)
         this.props.dispatch(
-            updateIdea(
-                Object.assign(this.props.idea, {body:e.target.value})
-            )
+            updateIdea(this.props.idea, {body:e.target.value})
         )
     }
 
@@ -86,11 +82,14 @@ class Idea extends Component {
             {!this.state.isEditing && <span onClick={this.startEditing.bind(this)} className="body">{this.props.idea.body || "Please describe your idea in more detail..."}</span>}
             {this.state.isEditing && <textarea 
                 className="bodyInput" 
+                maxLength="140"
                 onFocus={this.startEditing.bind(this)}
                 defaultValue={this.props.idea.body || "Please describe your idea in more detail..."}
                 onChange={e => this.updateBody.call(this, e)}
                 onBlur={this.saveIdea.bind(this)}>
                 </textarea>
+            }
+            {(140 - this.props.idea.body.length < 15) && this.state.isEditing && <span className="characterCount">{140 - this.props.idea.body.length} characters remaining</span>
             }
         </div>
         <div className="deleteContainer">

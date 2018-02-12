@@ -17,9 +17,9 @@ const createIdea = () => {
     }
 }
 
-const updateIdea = (idea) => ({
+const updateIdea = (idea, diff) => ({
     type:"IDEAS_EDIT",
-    payload:idea
+    payload: Object.assign({...idea}, diff)
 })
 
 const deleteIdea = (idea) => ({
