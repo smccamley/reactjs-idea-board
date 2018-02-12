@@ -1,0 +1,102 @@
+.Idea{
+    width: 250px;
+    border-radius: 8px;
+    background: white;
+    font-size: 10px;
+    padding: 0;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px #e2e2e2;
+    font-family: 'Roboto', sans-serif;
+
+    .editing{
+        font-size: 14px;
+        color: grey;
+        padding: 6px 6px 0px 0px;
+        -webkit-animation: flash linear 3s infinite;
+        animation: flash linear 3s infinite;
+    }
+    @-webkit-keyframes flash {
+        0% { opacity: 1; } 
+        50% { opacity: .1; } 
+        100% { opacity: 1; }
+    }
+    @keyframes flash {
+        0% { opacity: 1; } 
+        50% { opacity: .1; } 
+        100% { opacity: 1; }
+    }
+
+    .titleContainer, .bodyContainer{
+        padding: 20px;
+        position: relative
+    }
+
+    .titleContainer{
+        background: #305380;
+        color: white;
+        input{
+            width: 100%;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            &::placeholder{
+                color:lightgray;
+            }
+            padding-bottom: 5px;
+            border-bottom: 1px solid lightgrey;
+        }
+    }
+    
+    .bodyContainer {
+        &::after{
+            content: '';
+            border-bottom: 8px solid transparent;
+            border-top: 8px solid white;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: -16px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        span{
+            color: #909090;
+            font-size: 12px;
+            line-height: 16px;
+            min-height: 52px;
+            display: block;
+        }
+        textarea{
+            width: 100%;
+            min-height: 45px;
+            border: none;
+        }
+    }
+
+    .titleContainer span{
+        font-size:16px;
+    }
+    
+    .deleteContainer{
+        padding: 10px;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .Delete{
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        opacity: 0;
+        transition:opacity 0.2s linear;
+    }
+    &.hovering .Delete{
+        opacity: 1;
+    }
+
+}

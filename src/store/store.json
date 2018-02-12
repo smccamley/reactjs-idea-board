@@ -1,0 +1,23 @@
+{
+    "user":{
+        "data":{},
+        "isAuthenticated":false
+    },
+    "ideas":{
+        "data":[
+            {
+                "id": "asdfghj2345", 
+                "created_date": "new Date()", 
+                "title": "Idea 1", 
+                "body": "This is the description of the idea in all of it's glory we know that it is awesome for many reasons."
+            },
+            {"id": "asdf2345", "created_date": "new Date()", "title": "Idea 2", "body": "This is the description of the idea in all of it's glory we know that it is awesome for many reasons."},
+            {"id": "asdfqweghj2345", "created_date": "new Date()", "title": "Idea 3", "body": "This is the description of the idea in all of it's glory we know that it is awesome for many reasons."},
+            {"id": "asdf232345", "created_date": "new Date()", "title": "Idea 4", "body": "This is the description of the idea in all of it's glory we know that it is awesome for many reasons."},
+            {"id": "asdf1111j2345", "created_date": "new Date()", "title": "Idea 5", "body": "This is the description of the idea in all of it's glory we know that it is awesome for many reasons."}
+        ],
+        "isFetching":false,
+        "isFetchingError":false,
+        "fetchingErrorDetail":false
+    }
+}
