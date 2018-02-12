@@ -24,7 +24,7 @@ class Idea extends Component {
     }
 
     componentDidUpdate(prevProps, prevState){
-        if(this.state.isEditing){
+        if(this.state.isEditing && this.props.idea.title === ""){
             this.titleInput.focus()
         }
     }
